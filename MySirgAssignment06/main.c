@@ -103,27 +103,26 @@ void lcm()
 
 void n_times_prime_numbers()
 {
-    int i, j, count = 0, n;
+    int i = 1, j, count = 0, n, l;
     printf("Enter a number -> ");
     scanf("%d", &n);
 
-    for(i = 1; i <= n; i++)
+    for(l = 1; l <= n; i++)
     {
         for(j = 1; j <= i; j++)
         {
             if(i % j == 0)
             {
                 count++;
-                continue;
             }
         }
         if(count == 2)
         {
             printf("%d\n", i);
+            l++;
         }
         count = 0;
     }
-
     return;
 }
 
